@@ -4,9 +4,27 @@ import Base from "@layouts/Base.astro";
 import { markdownify } from "@lib/utils/textConverter";
 import { getEntryBySlug } from "astro:content";
 
+
+
 const entry = await getEntryBySlug("contact", "index");
 const { contact_form_action } = config.params;
 const { title, description, info } = entry?.data;
+
+if (Astro.request.method === "POST") {
+  try {
+    // Getting posted data from our contact form
+    const data = await Astro.request.formData();
+    const name = data.get("name");
+    const email = data.get("email");
+    const message = data.get("message");
+
+    // TODO: Do not forget to do validation and error handling over received data from your contact form.
+    console.log(data);
+
+  } catch (error) {
+    console.error(error);
+  }
+}
 ---
 
 <Base title={title} description={description}>
@@ -15,7 +33,7 @@ const { title, description, info } = entry?.data;
       <h1 class="text-center font-normal" set:html={markdownify(title)} />
       <div class="section row pb-0">
         <div class="col-12 md:col-6 lg:col-7">
-          <form class="contact-form" method="POST" action={contact_form_action}>
+          <form class="contact-form" method="POST">
             <div class="mb-3">
               <input
                 class="form-input w-full rounded"
