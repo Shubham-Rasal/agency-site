@@ -1,7 +1,7 @@
 ---
 banner:
   title: Boost Your Online Presence
-  content: "Are you facing challenges with your website development or digitalization? We have the solutions you need to thrive in the digital world. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nihil enim maxime corporis cumque totam aliquid nam sint inventore optio modi neque laborum officiis necessitatibus."
+  content: "Are you facing challenges with your website development or digitalization? We have the solutions you need to thrive in the digital world."
   image: "/images/banner-art.png"
   button:
     label: "Contact Us"
