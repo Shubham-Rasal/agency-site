@@ -75,7 +75,7 @@ services:
 
 workflow: 
   title: "Our Seamless Workflow"
-  image: "/images/workflow.png"
+  image: "/images/banner.png"
   description: "We follow a meticulous workflow to deliver outstanding results. Our process ensures efficient project management and a delightful client experience."
 
 call_to_action:
